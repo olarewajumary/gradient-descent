@@ -1,3 +1,6 @@
+import os
+os.makedirs('output', exist_ok=True)
+
 from src.model import load_data, gradient_descent
 from src.visualize import plot_convergence, plot_fit
 
