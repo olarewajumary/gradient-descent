@@ -6,6 +6,10 @@ A Python project that implements gradient descent without using any machine lear
 
 Loads a dataset of x and y values, runs gradient descent to find the best straight line through the data, and saves two charts showing how the error reduced over time and what the final line looks like against the actual data points.
 
+## The tricky part
+
+The learning rate matters a lot here. Too high and the loss doesn't converge, it actually explodes instead of shrinking. I had to tune it down until the descent stabilized and the loss curve actually flattened out instead of blowing up.
+
 ## Project structure
 
 gradient-descent/
@@ -24,10 +28,11 @@ gradient-descent/
 
 ## How to run
 
-Install dependencies:
+git clone https://github.com/olarewajumary/gradient-descent
+cd gradient-descent
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
-
-Run the project:
 python main.py
 
 ## Output
